@@ -9,9 +9,9 @@ services:
       mountPath: /data
       sizeGB: 1
     envVars:
-      - key: WS_URL
+      - key: wss://cfefhbccvelyuwoqmucu.supabase.co/functions/v1/wa-bridge-ws
         sync: false
-      - key: WS_TOKEN
+      - key: 5149ad5a4351c25aa2b78e354e749d1894b139a603357b9acab5aa9151aed6b8
         sync: false
-      - key: PAIR_PHONE
+      - key: 919870761229
         sync: false
