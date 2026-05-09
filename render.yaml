@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: harveer-wa-bridge
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    disk:
+      name: wa-auth
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: WS_URL
+        sync: false
+      - key: WS_TOKEN
+        sync: false
+      - key: PAIR_PHONE
+        sync: false

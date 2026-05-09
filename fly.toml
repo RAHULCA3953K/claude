@@ -1,0 +1,16 @@
+app = "harveer-wa-bridge"
+primary_region = "bom"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[mounts]
+  source = "wa_auth"
+  destination = "/data"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
+
+# Set secrets (don't commit values):
+#   fly secrets set WS_URL=wss://... WS_TOKEN=... PAIR_PHONE=...
